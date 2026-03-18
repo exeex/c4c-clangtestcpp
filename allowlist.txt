@@ -7,3 +7,5 @@
 # Examples:
 # CXX/class.access/p4.cpp|fail
 # CXX/class.derived/p1.cpp|pass
+
+CXX/class.access/p4.cpp|fail

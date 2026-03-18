@@ -16,10 +16,13 @@ Allowlist format:
 - Blank lines and `#` comments are ignored
 - Syntax: `relative/path.cpp|pass`
 - Syntax: `relative/path.cpp|fail`
+- Syntax: `relative/path.cpp|verify`
 
 Current runner semantics:
 - `pass`: `c4cll` must successfully emit LLVM IR for the case
 - `fail`: `c4cll` must reject the case with a non-zero exit code
+- `verify`: the Python runner reads `expected-error` / `expected-warning` / `expected-note`
+  comments and matches them against `c4cll` diagnostics using a minimal Clang-like model
 
 The source of truth for what is included is this repository, not the original
 LLVM checkout.
